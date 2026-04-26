@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Service &amp; Support | MarketFlow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container": "#ebeef4",
+                        "surface-dim": "#d7dae0",
+                        "secondary-fixed": "#d9e2ff",
+                        "tertiary-container": "#c55500",
+                        "surface-container-highest": "#dfe3e8",
+                        "on-tertiary-fixed-variant": "#783100",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e5e8ee",
+                        "outline-variant": "#c1c6d6",
+                        "primary": "#005bbf",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#341100",
+                        "background": "#f7f9ff",
+                        "surface-container-low": "#f1f4fa",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-primary-container": "#ffffff",
+                        "on-background": "#181c20",
+                        "on-secondary-fixed": "#001945",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#9e4300",
+                        "on-surface-variant": "#414754",
+                        "surface-tint": "#005bc0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#759efd",
+                        "inverse-surface": "#2d3135",
+                        "inverse-on-surface": "#eef1f7",
+                        "on-secondary-container": "#00337c",
+                        "on-tertiary-container": "#0e0200",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#dfe3e8",
+                        "secondary": "#2b5bb5",
+                        "outline": "#727785",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001a41",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xxl": "48px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "container-max": "1280px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9ff;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-3 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 font-sans antialiased text-slate-900 dark:text-slate-100">
+<div class="flex items-center gap-8 max-w-7xl mx-auto w-full">
+<span class="text-2xl font-bold tracking-tight text-blue-600 dark:text-blue-400">MarketFlow</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 text-label-md" href="#">Catalog</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 text-label-md" href="#">Groupage</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 text-label-md" href="#">Dashboard</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 text-label-md" href="#">Support</a>
+</nav>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600 cursor-pointer hover:bg-slate-50 p-2 rounded-full transition-colors" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-slate-600 cursor-pointer hover:bg-slate-50 p-2 rounded-full transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Search -->
+<section class="mb-16 text-center">
+<h1 class="font-h1 text-h1 text-on-background mb-4">How can we help you today?</h1>
+<p class="text-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto">Search our knowledge base or browse categories below to find solutions for your business needs.</p>
+<div class="max-w-xl mx-auto relative">
+<input class="w-full h-14 pl-12 pr-4 rounded-xl border border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Search for articles, orders, or topics..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-4 text-outline" data-icon="search">search</span>
+</div>
+</section>
+<!-- Bento Grid Main Sections -->
+<div class="bento-grid">
+<!-- Order Tracking Widget (6 Cols) -->
+<div class="col-span-12 lg:col-span-7 bg-white p-8 rounded-xl border border-surface-container-high flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="local_shipping">local_shipping</span>
+</div>
+<h2 class="font-h2 text-h2">Track Your Shipment</h2>
+</div>
+<p class="text-body-md text-on-surface-variant mb-8">Enter your tracking number or order ID to get real-time updates on your delivery status.</p>
+<div class="flex flex-col md:flex-row gap-4 mb-8">
+<div class="flex-grow">
+<label class="font-label-md text-label-md text-on-surface-variant mb-2 block">Order Number</label>
+<input class="w-full h-12 px-4 rounded border border-outline-variant focus:border-primary outline-none" placeholder="e.g. #MF-99231" type="text"/>
+</div>
+<div class="flex items-end">
+<button class="h-12 px-8 bg-primary text-on-primary font-button text-button rounded hover:opacity-90 transition-opacity whitespace-nowrap">Track Order</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-surface-container">
+<div class="flex flex-col gap-1">
+<span class="text-label-sm text-outline uppercase tracking-wider">Last Activity</span>
+<span class="text-body-md font-semibold">In Transit - Memphis, TN</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm text-outline uppercase tracking-wider">Estimated Delivery</span>
+<span class="text-body-md font-semibold">Oct 24, 2024</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm text-outline uppercase tracking-wider">Service Level</span>
+<span class="text-body-md font-semibold">Priority Freight</span>
+</div>
+</div>
+</div>
+<!-- Live Chat Card (5 Cols) -->
+<div class="col-span-12 lg:col-span-5 bg-primary-container text-on-primary-container p-8 rounded-xl flex flex-col relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-h3 text-h3 mb-4">Connect with an Expert</h3>
+<p class="text-body-md opacity-90 mb-8">Average wait time: &lt; 2 minutes. Our agents are ready to assist with technical or billing inquiries.</p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-4 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="professional customer support representative woman smiling in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHmmAnx4LF-IqIaV9O-u-CunZHPHOCrFnnoEjbUkax_erroQD2PRiHKZI-hy8ex_kG3Y8uc7mzXUmqwy9FYpRCpCXNNop482Gl4pCyjScecItGXKLDCKcfX6rKHPYzXzqmt6bhpc8nvbQx4cWphCpTsE02_UzXYwiN2waMra9cbtPlicWWIp6WxFZBbTjbe8BdxKGiYUjnEej7VAsFwYbpOWv_s6oQ5-46dl8HFE7bksn2s26wo-nH9V3FNeY3DxgcW-kOpIwB_eQ3"/>
+<div>
+<p class="font-semibold text-body-sm">Agent Sarah is online</p>
+<p class="text-xs opacity-75">Specialist in Global Logistics</p>
+</div>
+</div>
+</div>
+<button class="w-full h-12 bg-white text-primary font-button text-button rounded hover:bg-surface-bright transition-colors">Start Live Chat</button>
+</div>
+<!-- Abstract BG Decoration -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- FAQ Section (12 Cols) -->
+<div class="col-span-12 mt-8">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-h2 text-h2">Frequently Asked Questions</h2>
+<a class="text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+                        View All Help Articles <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- FAQ Card 1 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">How do I update my billing information?</h4>
+<p class="text-body-sm text-on-surface-variant">Manage payment methods, tax IDs, and billing addresses in your account settings under 'Finance'.</p>
+</div>
+<!-- FAQ Card 2 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="inventory_2">inventory_2</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">What is 'Groupage' and how does it work?</h4>
+<p class="text-body-sm text-on-surface-variant">Our groupage service combines multiple small shipments into a single container to reduce your costs.</p>
+</div>
+<!-- FAQ Card 3 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">How secure is the transaction process?</h4>
+<p class="text-body-sm text-on-surface-variant">All payments are held in escrow until delivery is confirmed by both parties through our secure gateway.</p>
+</div>
+<!-- FAQ Card 4 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">Can I change my delivery address?</h4>
+<p class="text-body-sm text-on-surface-variant">Address changes are possible up to 24 hours before the scheduled dispatch time via the order details page.</p>
+</div>
+<!-- FAQ Card 5 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="assignment_return">assignment_return</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">What is the policy for damaged goods?</h4>
+<p class="text-body-sm text-on-surface-variant">Report any damages within 48 hours of receipt for a full investigation and insurance claim processing.</p>
+</div>
+<!-- FAQ Card 6 -->
+<div class="bg-white p-6 rounded-lg border border-surface-container-high hover:border-primary transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="add">add</span>
+</div>
+<h4 class="font-semibold text-body-md mb-2">Do you support international shipping?</h4>
+<p class="text-body-sm text-on-surface-variant">Yes, MarketFlow operates in over 140 countries with dedicated local customs clearance partners.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Support CTA Banner -->
+<section class="mt-20 p-12 bg-slate-900 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="relative z-10 max-w-xl">
+<h2 class="text-white font-h2 text-h2 mb-4">Still haven't found what you're looking for?</h2>
+<p class="text-slate-400 text-body-lg">Our multi-lingual support team is available 24/7 to resolve any complex issues or custom requests.</p>
+</div>
+<div class="relative z-10 flex flex-wrap gap-4">
+<button class="px-8 py-3 bg-white text-slate-900 font-button text-button rounded hover:bg-slate-100 transition-colors">Contact Support</button>
+<button class="px-8 py-3 bg-slate-800 text-white font-button text-button rounded hover:bg-slate-700 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="phone">phone</span> Schedule a Call
+                </button>
+</div>
+<!-- Decorative gradient -->
+<div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, #1a73e8 0%, transparent 60%);"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 px-6">
+<div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<span class="text-sm font-bold text-slate-900 dark:text-white mb-4 block">MarketFlow</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-sans">
+                    The world's most reliable ecosystem for B2B trade and streamlined logistics management.
+                </p>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-white text-xs uppercase tracking-widest mb-4">Marketplace</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Catalog</a></li>
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Groupage Services</a></li>
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Bulk Orders</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-white text-xs uppercase tracking-widest mb-4">Resources</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Seller Guide</a></li>
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Help Center</a></li>
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">API Documentation</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-white text-xs uppercase tracking-widest mb-4">Support Hub</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 dark:text-slate-400 underline text-blue-600" href="#">Privacy Policy</a></li>
+<li><a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-sans">
+                © 2024 MarketFlow Ecosystem. Secure &amp; Reliable Commerce.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-2px_10px_rgba(0,0,0,0.05)] border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="text-[10px] font-medium">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="text-[10px] font-medium">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-[10px] font-medium">Bulk</span>
+</div>
+<div class="flex flex-col items-center justify-center text-blue-600 dark:text-blue-400 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</nav>
+<!-- Floating Live Chat Bubble (Desktop/Global) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-[60] lg:flex hidden">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</body></html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container": "#ebeef4",
+                        "surface-dim": "#d7dae0",
+                        "secondary-fixed": "#d9e2ff",
+                        "tertiary-container": "#c55500",
+                        "surface-container-highest": "#dfe3e8",
+                        "on-tertiary-fixed-variant": "#783100",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e5e8ee",
+                        "outline-variant": "#c1c6d6",
+                        "primary": "#005bbf",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#341100",
+                        "background": "#f7f9ff",
+                        "surface-container-low": "#f1f4fa",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-primary-container": "#ffffff",
+                        "on-background": "#181c20",
+                        "on-secondary-fixed": "#001945",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#9e4300",
+                        "on-surface-variant": "#414754",
+                        "surface-tint": "#005bc0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#759efd",
+                        "inverse-surface": "#2d3135",
+                        "inverse-on-surface": "#eef1f7",
+                        "on-secondary-container": "#00337c",
+                        "on-tertiary-container": "#0e0200",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#dfe3e8",
+                        "secondary": "#2b5bb5",
+                        "outline": "#727785",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001a41",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xxl": "48px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "container-max": "1280px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-3 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-8 max-w-7xl mx-auto w-full">
+<span class="text-2xl font-bold tracking-tight text-blue-600 dark:text-blue-400">MarketFlow</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 font-medium" href="#">Catalog</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 font-medium" href="#">Groupage</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 font-medium" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 font-medium" href="#">Support</a>
+</nav>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Delivery Options & Form -->
+<div class="lg:col-span-8 space-y-8">
+<section>
+<h1 class="font-h2 text-h2 mb-6">Finaliser votre commande</h1>
+<!-- Delivery Method Toggle -->
+<div class="bg-surface-container-low p-1.5 rounded-xl flex w-full max-w-md mb-8">
+<button class="flex-1 py-3 px-4 rounded-lg bg-white shadow-sm flex items-center justify-center gap-2 text-primary font-button">
+<span class="material-symbols-outlined text-xl" data-icon="local_shipping">local_shipping</span>
+                            Livraison à domicile
+                        </button>
+<button class="flex-1 py-3 px-4 rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 text-on-surface-variant font-button">
+<span class="material-symbols-outlined text-xl" data-icon="store">store</span>
+                            Retrait en magasin
+                        </button>
+</div>
+<!-- Checkout Form -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+<h2 class="font-h3 text-h3 mb-6">Informations de livraison</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Nom complet</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="Ex: Jean Dupont" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Numéro de téléphone</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">+33</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="6 12 34 56 78" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Code Postal</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="75001" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Adresse de livraison</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="123 Rue de Rivoli" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Complément d'adresse (Optionnel)</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="Appartement, Étage, Code d'entrée..." type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Ville</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all" placeholder="Paris" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Pays</label>
+<select class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary bg-white outline-none transition-all appearance-none">
+<option>France</option>
+<option>Belgique</option>
+<option>Suisse</option>
+<option>Luxembourg</option>
+</select>
+</div>
+</form>
+</div>
+<!-- Payment Method (Implicitly needed for checkout flow) -->
+<div class="mt-8">
+<h3 class="font-h3 text-h3 mb-4">Mode de paiement</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="border-2 border-primary bg-blue-50 p-4 rounded-xl cursor-pointer flex flex-col gap-2">
+<input checked="" class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-primary" data-icon="credit_card">credit_card</span>
+<span class="font-label-md text-primary">Carte Bancaire</span>
+</label>
+<label class="border border-outline-variant p-4 rounded-xl cursor-pointer hover:bg-surface-container-low transition-colors flex flex-col gap-2">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_balance">account_balance</span>
+<span class="font-label-md text-on-surface-variant">Virement</span>
+</label>
+<label class="border border-outline-variant p-4 rounded-xl cursor-pointer hover:bg-surface-container-low transition-colors flex flex-col gap-2">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+<span class="font-label-md text-on-surface-variant">PayPal</span>
+</label>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Side: Order Summary -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-6">
+<div class="bg-white border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-h3 text-h3 mb-6">Récapitulatif</h3>
+<div class="space-y-4 mb-6">
+<div class="flex gap-4">
+<img class="w-16 h-16 rounded-lg object-cover bg-slate-100" data-alt="vibrant red athletic running shoe with white sole isolated on grey background professional product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh63XEbIxcp1Gy1Z3LdxulFbY_H_mBoMCOmtukOQ2JvXLB-SrzHqQh5XO1XgOFbqlTsh-DlhTSXApr6BH3M2ACuK4emLxwr4Zaf_iOJh0tnziqyKzrHrhb_ZGW60LSUZ5QVmYXxJB2Krv5D2AcL-lg8LhlhYgVm7bbsfO_OjK_l9HOZdyGl1inqiyHXzR11KJMUC7XtX9UVoix24186kQh_FaWPETHi4at76PKc2SsQwMUXNHs7sX7OAAt-DLZ6Y4JmWJsT4_pvfva"/>
+<div class="flex-1">
+<p class="font-label-md text-on-background line-clamp-1">Runner Pro Max 2024</p>
+<p class="text-body-sm text-on-surface-variant">Taille: 42 • Quantité: 1</p>
+<p class="font-label-md text-primary mt-1">129,99 €</p>
+</div>
+</div>
+<div class="flex gap-4">
+<img class="w-16 h-16 rounded-lg object-cover bg-slate-100" data-alt="minimalist white smartwatch with light grey strap on clean studio background soft lighting elegant tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZFXwkU8cSqUQRhSNrw6LTre6oHgNBSFoh_Cu9YKrJvv5Tq7EGiVkidmWYL6bRVSd016oG3ee25BRSJ68pORT7zQJo6UH2Sphl2ksqVHtTN3NX63S6EfzCxvpFeM2OqlrmS6EOutOjG5p29i_KnV2aQ_JYoIf2137dOatwvq5RrS2QdZaiZnUlugXhcTKW5hBfoKRMFIYaAu0sLZC0WLxfVTPGi3tvdRcKGlGx3gYtya6GNkn4hzI7RHqKCMWmk_4GxCuikRbZbkiE"/>
+<div class="flex-1">
+<p class="font-label-md text-on-background line-clamp-1">Minimalist SmartWatch</p>
+<p class="text-body-sm text-on-surface-variant">Argent • Quantité: 1</p>
+<p class="font-label-md text-primary mt-1">249,00 €</p>
+</div>
+</div>
+</div>
+<div class="border-t border-dashed border-outline-variant pt-6 space-y-3">
+<div class="flex justify-between text-body-md text-on-surface-variant">
+<span>Sous-total</span>
+<span>378,99 €</span>
+</div>
+<div class="flex justify-between text-body-md text-on-surface-variant">
+<span>Livraison</span>
+<span class="text-green-600 font-medium">Gratuit</span>
+</div>
+<div class="flex justify-between text-body-md text-on-surface-variant">
+<span>Taxes (TVA 20%)</span>
+<span>75,80 €</span>
+</div>
+<div class="flex justify-between items-end pt-4">
+<span class="font-h3 text-h3">Total</span>
+<span class="text-2xl font-bold text-primary">454,79 €</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-primary text-white h-14 rounded-xl font-button text-lg hover:bg-primary-container transition-colors shadow-lg active:scale-[0.98] duration-150">
+                            Payer maintenant
+                        </button>
+<div class="mt-6 flex items-center justify-center gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+                            Paiement 100% sécurisé et crypté
+                        </div>
+</div>
+<!-- Trust Badges -->
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant grid grid-cols-2 gap-4">
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified">verified</span>
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Garantie 2 ans</p>
+</div>
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="package_2">package_2</span>
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Retour 30 jours</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 px-6">
+<div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<span class="text-sm font-bold text-slate-900 dark:text-white">MarketFlow</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+                    © 2024 MarketFlow Ecosystem. Secure &amp; Reliable Commerce.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Resources</h4>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Seller Guide</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Legal</h4>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Newsletter</h4>
+<div class="flex">
+<input class="bg-white border border-slate-200 px-3 py-2 text-xs rounded-l-lg w-full outline-none focus:border-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-white px-4 py-2 text-xs font-bold rounded-r-lg">Join</button>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-blue-600 dark:text-blue-400 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="text-[10px] font-medium">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="text-[10px] font-medium">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-[10px] font-medium">Bulk</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

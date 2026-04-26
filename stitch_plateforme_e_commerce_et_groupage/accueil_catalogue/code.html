@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc7ff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdbcb",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-container": "#ebeef4",
+                    "surface-dim": "#d7dae0",
+                    "secondary-fixed": "#d9e2ff",
+                    "tertiary-container": "#c55500",
+                    "surface-container-highest": "#dfe3e8",
+                    "on-tertiary-fixed-variant": "#783100",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e8ee",
+                    "outline-variant": "#c1c6d6",
+                    "primary": "#005bbf",
+                    "primary-container": "#1a73e8",
+                    "secondary-fixed-dim": "#b0c6ff",
+                    "on-secondary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed": "#341100",
+                    "background": "#f7f9ff",
+                    "surface-container-low": "#f1f4fa",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-primary-container": "#ffffff",
+                    "on-background": "#181c20",
+                    "on-secondary-fixed": "#001945",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9ff",
+                    "surface-bright": "#f7f9ff",
+                    "on-surface": "#181c20",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#9e4300",
+                    "on-surface-variant": "#414754",
+                    "surface-tint": "#005bc0",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#759efd",
+                    "inverse-surface": "#2d3135",
+                    "inverse-on-surface": "#eef1f7",
+                    "on-secondary-container": "#00337c",
+                    "on-tertiary-container": "#0e0200",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#dfe3e8",
+                    "secondary": "#2b5bb5",
+                    "outline": "#727785",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001a41",
+                    "on-primary-fixed-variant": "#004493"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xxl": "48px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "container-max": "1280px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "h3": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                    "h1": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-blue-600 dark:text-blue-400">MarketFlow</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 font-label-md text-label-md" href="#">Catalog</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors font-label-md text-label-md" href="#">Groupage</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors font-label-md text-label-md" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors font-label-md text-label-md" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 flex-1 justify-end">
+<div class="relative w-full max-w-xs hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-primary-container text-body-sm font-body-sm" placeholder="Search logistics, products..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full relative">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary w-4 h-4 rounded-full text-[10px] text-white flex items-center justify-center">2</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<!-- Hero Search & Local Context -->
+<section class="mb-12">
+<div class="bg-primary-container rounded-xl p-8 md:p-12 text-white relative overflow-hidden shadow-xl">
+<div class="relative z-10 max-w-2xl">
+<h1 class="font-h1 text-h1 mb-4">Precision Logistics Meets Global Commerce.</h1>
+<p class="font-body-lg text-body-lg opacity-90 mb-8">Source from local distributors or tap into distant groupage networks with real-time tracking and verified reliability.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="flex-1 bg-white rounded-lg p-1 flex items-center shadow-lg">
+<span class="material-symbols-outlined text-slate-400 px-3">location_on</span>
+<input class="w-full border-none focus:ring-0 text-slate-900 font-body-md text-body-md py-3" placeholder="Set your delivery location" type="text"/>
+</div>
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-button text-button hover:bg-slate-50 transition-colors">Find Local Stock</button>
+</div>
+</div>
+<!-- Abstract Design Elements -->
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute right-10 bottom-0 w-64 h-64 bg-secondary-container/20 rounded-full blur-2xl"></div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 space-y-8">
+<div>
+<h3 class="font-h3 text-h3 mb-4 text-slate-900">Sourcing Model</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-slate-700 group-hover:text-primary transition-colors">Local Inventory</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-slate-700 group-hover:text-primary transition-colors">Distant (Groupage)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-slate-700 group-hover:text-primary transition-colors">Factory Direct</span>
+</label>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-200">
+<h3 class="font-h3 text-h3 mb-4 text-slate-900">Price Range</h3>
+<div class="space-y-4">
+<input class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between items-center">
+<div class="px-3 py-2 border border-slate-200 rounded text-body-sm font-body-sm text-slate-600">$0</div>
+<span class="text-slate-400">—</span>
+<div class="px-3 py-2 border border-slate-200 rounded text-body-sm font-body-sm text-slate-600">$5,000</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-200">
+<h3 class="font-h3 text-h3 mb-4 text-slate-900">Categories</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-label-sm font-label-sm cursor-pointer hover:bg-blue-100">Industrial</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-label-sm font-label-sm cursor-pointer hover:bg-slate-200">Tech Gear</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-label-sm font-label-sm cursor-pointer hover:bg-slate-200">Raw Mats</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-label-sm font-label-sm cursor-pointer hover:bg-slate-200">Automotive</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-label-sm font-label-sm cursor-pointer hover:bg-slate-200">Packaging</span>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="flex justify-between items-center mb-6">
+<span class="font-body-sm text-body-sm text-slate-500">Showing <span class="font-bold text-slate-900">124</span> logistics solutions</span>
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-slate-400">Sort by:</span>
+<select class="bg-transparent border-none focus:ring-0 font-label-md text-label-md text-slate-900 py-0 pl-0 pr-6 cursor-pointer">
+<option>Relevance</option>
+<option>Price: Low to High</option>
+<option>Fastest Delivery</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="industrial metal pallet racking in a high-tech clean warehouse with bright overhead lighting and blue structural accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT8eybPrxN08AAUeM_ONmSMMNQSf0WRjuLV3oX6pZH6SQh1BUrK6faUszOF7Li9c7PoZDq7AeqqJhB9juZDMbOPB_uDBw0G4Qqsvk0cVbuK2gD03Jt25kHFej5COMkVuFArCqXrgI2iHGcjPFbV8VgdW9yOnD6HIscz8DuNYdDqY3-NoQDvAN2noERFY3ncMpKeIOG8HLc2E4eDI5q8M7mdzR-xxJO0evkb4dIKKRNkiQRzfKfElFzoFhJOfH2VnHx5vLyPY_raB9k"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold tracking-wider uppercase">Local Stock</div>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Industrial Systems</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">Modular Pallet Racking Units</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$499.00</span>
+<span class="text-body-sm text-slate-400 line-through">$620.00</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-button text-button hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="high-end silver computer processor chip on a motherboard with neon blue circuitry lighting and technical precision feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe1XpqQS9GlgYMkDjii8GhWjLBYCJxTzK7W2r8SS_zfJ_wjnjl5BBjnItHMNWTYjgo6ffd6nRu-hHqA5RHdz7sO569-xBi9FpsB0VmysJ5TRWOySj7BMpq3OuTOmvJFgHI6sn1OG9wJAmLCqQm0foH6ZlRzlaE3cLRuuuwGIN8cknvb-oimsrg4BmmIiyIfutEBDAGmuGOxzNYOIhwOQNWgiMzmZyBXqNas5Rnz1NJ5eKuGS53_Axonv2mwHHArd4Ce8dyJPfh_rwN"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-blue-100 text-blue-700 rounded text-[10px] font-bold tracking-wider uppercase">Groupage Ready</div>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Tech Hardware</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">Quantum Series Processing Chip</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$1,250.00</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-lg font-button text-button hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="set of professional heavy-duty black industrial tools arranged neatly on a dark wooden workbench with warm spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBibRknB562HIjCprJDjf3U7w4_Fra24FCUq8iW4qxJXCnqPAocrjULmNgEZTFo_Nw2d5fGPYEbX4yDmTQHINsr4lu09WboV8QbKoHEet4bPzLw8Kxg6p-bJbNGeiWCXDrA4Qyj3n1XzJXvUoRsc1Fzc0NvAwMyyuBB7pDvdxNyqTB5jwbEDyWxahgIzj_b2Njtyaj8ISTwYEg5WYyIb184Uert_q5w1bDIz4w3UlcozSUkqzE5znSe_BaMf8uc47bcUyM8CB9RAG72"/>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Maintenance</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">Precision Torque Wrench Kit</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$189.99</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-button text-button hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="industrial yellow hard hat and safety gloves sitting on a concrete surface at a construction site with blurred scaffolding background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBukZpH3aVJlEOAOWnzrUMvPI3c-uaIilPHeKYfJPF53Yo2iWMLFT2SgDgouckHesKPFzNFFMlK1AkKeVpFI6LhPmHDkV50RKi4O5cbpwPxKVwAva_5MmSjLCO0fXnDevEcrbOxR_qeXudMjAO8tu9IzfFentTBbiWHeDteZBTF7e0SFkepV9qDOerqz6Ao9gw-G0VKF8LWZRJIvo_t2C81s_8FI4EtqgmawKRWZ1EJs6xjqOrwdAioHwVZ1jMxQPILnXYSApOe_Oso"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold tracking-wider uppercase">Local Stock</div>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Safety Equipment</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">High-Impact Safety Helmet V2</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$45.00</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-button text-button hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="close-up of complex mechanical gears and cogs made of polished steel working together with subtle grease and metallic shine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWzsjtZR4iolF8b89exyi0fH_vnQdios7VBGNrUZr3dCe02BLKXbd_y3x5EdgTkjfy9OBwA-_rfG9aQDsV6raOBbAnt0Tsq7KHaqc9AN3I3n34pEKxamMfWObtXdCRKi24YKLnxsjCaA7M2UAMnOFcQC7XEYv13Cvao_als6boYf5gXwrQ_ru_LPH5Lkvy3klSjoWTBkHL6gD0mdMELzKC5ZQmtBTKQP66L54aMPKUN7Hdo3HBwW4RfiWeqaVcsOYqb0805KYCRuZ"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-blue-100 text-blue-700 rounded text-[10px] font-bold tracking-wider uppercase">Groupage Ready</div>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Mechanical Components</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">Heavy-Duty Steel Cog Assembly</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$230.50</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-button text-button hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-primary transition-colors">
+<div class="aspect-square relative overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="stack of sleek matte black shipping boxes with white minimalist branding labels on a clean grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR8VjinlrWdoozPGTNmm4763BP7MPd8AbN_Npeu7uahBo-0lfRIgJskpnYVbon4vbs07W4WLiJ8-T627PSsoUcPsMO-XSW_a8QaaI4dOtAFoROIEwo_xTM8tCsMoTT_iG7WDeezwGPS703Ju--SRgFJCdAbRHXV7C_dnKfzLy7KaG5Ae-8caiyQcCbc24TjQ6shHiPXV4kc-cuGefiO55jXRkLMx6zMuO_rOvZJRpQq8NTcwbSa7Cy6u-GrAINyTkbIYsYT3r8Tn6M"/>
+</div>
+<div class="p-5">
+<div class="text-label-sm font-label-sm text-slate-400 mb-1">Packaging</div>
+<h4 class="font-h3 text-body-md text-slate-900 mb-2 truncate">Sustainable Fiberboard Cartons</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-h3 font-h3 text-primary">$12.00</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-button text-button hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                Add to cart
+                            </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-4">
+<button class="p-2 border border-slate-200 rounded hover:bg-slate-50 disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 bg-primary text-white rounded font-label-md">1</button>
+<button class="w-10 h-10 hover:bg-slate-100 rounded text-slate-600 font-label-md">2</button>
+<button class="w-10 h-10 hover:bg-slate-100 rounded text-slate-600 font-label-md">3</button>
+<span class="px-2 self-end text-slate-400">...</span>
+<button class="w-10 h-10 hover:bg-slate-100 rounded text-slate-600 font-label-md">12</button>
+</div>
+<button class="p-2 border border-slate-200 rounded hover:bg-slate-50">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-blue-600 dark:text-blue-400 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="text-[10px] font-medium font-label-sm">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-[10px] font-medium font-label-sm">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium font-label-sm">Bulk</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-all duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-label-sm">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 mt-20">
+<div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 py-12 px-6">
+<div class="space-y-4">
+<span class="text-sm font-bold text-slate-900 dark:text-white">MarketFlow</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-sans">Empowering global supply chains through secure, modular, and high-precision commerce solutions. Connect locally or scale globally.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-slate-900 dark:text-white mb-1">Product</span>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Catalog</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Groupage Network</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Distributors</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-slate-900 dark:text-white mb-1">Company</span>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Seller Guide</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-slate-900 dark:text-white mb-1">Support</span>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Help Center</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">API Docs</a>
+<a class="text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-sans" href="#">Contact Sales</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pb-12">
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-sans">© 2024 MarketFlow Ecosystem. Secure &amp; Reliable Commerce.</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 cursor-pointer">language</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 cursor-pointer">verified_user</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 cursor-pointer">public</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

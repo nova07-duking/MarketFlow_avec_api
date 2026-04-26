@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion — MarketFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <style>
+        .login-card {
+            background: white;
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            width: 100%;
+            max-width: 400px;
+            box-shadow: var(--shadow-md);
+        }
+        .otp-inputs input {
+            width: 45px;
+            height: 55px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-md);
+            background: var(--background);
+        }
+        .otp-inputs input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+        }
+    </style>
+</head>
+<body style="height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f7f9ff 0%, #e8f0fe 100%);">
+    
+    <div class="login-card">
+        <div style="text-align: center; margin-bottom: var(--space-xl);">
+            <div style="width: 64px; height: 64px; background: var(--primary-container); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
+                <span class="material-symbols-outlined" style="font-size: 32px; font-variation-settings: 'FILL' 1;">account_circle</span>
+            </div>
+            <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 4px;">Bon retour parmi nous</h1>
+            <p style="color: var(--on-surface-variant); font-size: 14px;">Accès sécurisé à votre espace MarketFlow</p>
+        </div>
+
+        <!-- Étape 1 : Email -->
+        <div id="step-email">
+            <div style="margin-bottom: var(--space-md);">
+                <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px;">Adresse Email</label>
+                <div style="position: relative;">
+                    <span class="material-symbols-outlined" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #727785; font-size: 20px;">mail</span>
+                    <input type="email" id="email-input" placeholder="exemple@marketflow.com" style="width: 100%; padding: 12px 12px 12px 40px; border-radius: var(--radius-md); border: 1px solid var(--outline-variant); font-size: 16px;">
+                </div>
+                <p style="font-size: 12px; color: var(--on-surface-variant); margin-top: 8px;">Un code de vérification à 6 chiffres vous sera envoyé.</p>
+            </div>
+            <button id="send-otp-btn" style="width: 100%; background: var(--primary); color: white; padding: 14px; border-radius: var(--radius-md); font-weight: 600; font-size: 16px;">
+                Obtenir le code
+            </button>
+        </div>
+
+        <!-- Étape 2 : OTP -->
+        <div id="step-otp" style="display: none;">
+            <div class="flex justify-between items-center" style="margin-bottom: var(--space-md);">
+                <label style="font-size: 14px; font-weight: 500;">Vérification OTP</label>
+                <button id="resend-btn" style="background: none; color: var(--primary); font-size: 12px; font-weight: 600;">Renvoyer</button>
+            </div>
+            <div class="otp-inputs flex justify-between" style="margin-bottom: var(--space-xl);">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+            </div>
+            <button id="verify-otp-btn" style="width: 100%; background: var(--primary); color: white; padding: 14px; border-radius: var(--radius-md); font-weight: 600; font-size: 16px;">
+                Vérifier et se connecter
+            </button>
+        </div>
+
+        <div style="margin-top: var(--space-xl); text-align: center;">
+            <a href="index.html" style="color: var(--on-surface-variant); font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 4px;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+                Retour au site
+            </a>
+        </div>
+    </div>
+
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

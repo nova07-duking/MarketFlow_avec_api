@@ -1,0 +1,37 @@
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.settings/
+.project
+.classpath
+.factorypath
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# Build
+bin/
+build/
+
+# Docker
+db_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Node (si utilisé pour le front plus tard)
+node_modules/
+dist/
